@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import Stories from './components/Stories';
+// import Users from './components/Users';
+// import Stories from './components/Stories';
+import { View } from './components/View';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Stories />
+        <View />
+        {/*<Stories />*/}
+        {/*<Users />*/}
       </div>
     );
   }

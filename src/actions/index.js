@@ -1,14 +1,33 @@
-export const LOAD_STORIES = 'LOAD_STORIES';
-export const CLEAR_STORIES = 'CLEAR_STORIES';
+export const FETCH_STORIES = 'FETCH_STORIES';
+export const FETCH_STORIES_FULFILLED = 'FETCH_STORIES_FULFILLED';
 
-export function loadStories() {
+export function fetchStoriesAction(count = 5) {
   return {
-    type: 'LOAD_STORIES',
+    type: FETCH_STORIES,
+    payload: count,
   }
 }
 
-export function clear() {
+export function fetchStoriesFullfillAction(stories) {
   return {
-    type: 'CLEAR_STORIES',
+    type: FETCH_STORIES_FULFILLED,
+    payload: stories,
+  }
+}
+
+export const FETCH_USER = 'FETCH_USER';
+export const FETCH_USER_FULFILLED = 'FETCH_USER_FULFILLED';
+
+export function fetchUserAction(login) {
+  return {
+    type: FETCH_USER,
+    payload: login,
+  }
+}
+
+export function fetchUserFulfilledAction(user) {
+  return {
+    type: FETCH_USER_FULFILLED,
+    payload: user,
   }
 }
